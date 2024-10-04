@@ -14,8 +14,7 @@ const zodSchemasignup=z.object({
 })
 
 router.post('/signup',async (req,res)=>{
-    const body=req.body
-    const {success}=zodSchemasignup.safeParse(body)
+    const {success}=zodSchemasignup.safeParse(req.body)
     if(!success){
         return res.json({
             msg:'There was a Error / Invalid Values'
@@ -59,7 +58,7 @@ router.post('/signin',async (req,res)=>{
     const {success}=zodSchemasignin.safeParse(body)
     if(!success){
         return res.status(411).json({
-             message: "Email already taken / Incorrect inputs"
+             message: " Incorrect inputs"
         })
     }
     const user=await User.findOne({
