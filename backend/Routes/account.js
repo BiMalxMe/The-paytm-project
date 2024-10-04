@@ -48,7 +48,7 @@ router.post('/transfer',authMiddleware,async(req,res)=>{
     });
     }catch(err){
         res.status(400).json({
-            msg:'Somrthings up with the server'
+            msg:'Somrthing is Wrong'
         })
     }
 })
