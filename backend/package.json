@@ -14,6 +14,7 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
+    "vercel": "^37.6.1",
     "zod": "^3.23.8"
   }
 }
